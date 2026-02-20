@@ -23,4 +23,6 @@ jobs:
             # git pull origin main
             git fetch origin main
             git reset --hard origin/main
+            sudo chown -R www-data:www-data .
+            sudo chmod -R 775 .
             sudo systemctl restart apache2
